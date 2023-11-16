@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">College</string>
+    <string name="create_account">Создайте аккаунт</string>
+    <string name="enter">Войти</string>
+    <string name="enter_login">Введите логин</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="no_account">Нет учётной записи? Регистрация</string>
+    <string name="registration">Регистрация</string>
+    <string name="avaible_account">Уже есть учётная запись? Войти</string>
+    <string name="role">Роль</string>
+    <string name="student">Студент</string>
+    <string name="lecturer">Преподаватель</string>
+</resources>
