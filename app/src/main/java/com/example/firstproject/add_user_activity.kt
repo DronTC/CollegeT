@@ -21,6 +21,9 @@ class add_user_activity : AppCompatActivity() {
         val buttonShowAlertDialog: Button = findViewById(R.id.button_show_alert_dialog)
         val buttonDatePicker : Button = findViewById(R.id.select_date_button)
 
+
+
+
         GettingCurrentDate(viewDate)
 
         val myCalendar = Calendar.getInstance()
@@ -66,5 +69,8 @@ class add_user_activity : AppCompatActivity() {
             mAlertDialog.dismiss()
             Toast.makeText(this, editText.text, Toast.LENGTH_SHORT).show()
         }
+    }
+    fun CreateSubjectList(subjectList : List<Subject>){
+
     }
 }
