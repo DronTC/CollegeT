@@ -15,23 +15,13 @@ class UserActivity : AppCompatActivity() {
         setContentView(R.layout.activity_user_interface)
 
         val buttonAdd: Button = findViewById(R.id.button_add)
-        val task: EditText = findViewById(R.id.task_add)
         val taskList: LinearLayout = findViewById(R.id.tasks_list)
         val helloUser: TextView = findViewById(R.id.hello_textView)
         helloUser.text = "Приветствуем, ${GlobalVariables.login}"
 
         buttonAdd.setOnClickListener {
-            var taskText = task.text.toString().trim()
-
-            if(taskText==""){
-                Toast.makeText(this, "Необходимо заполнить поле",
-                    Toast.LENGTH_SHORT).show()
-            }
-            else{
-                val textView = TextView(this)
-                textView.text = taskText
-                taskList.addView(textView)
-            }
+            val intent = Intent(this, add_user_activity::class.java)
+            startActivity(intent)
         }
     }
 }
