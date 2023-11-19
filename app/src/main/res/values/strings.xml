@@ -10,4 +10,7 @@
     <string name="role">Роль</string>
     <string name="student">Студент</string>
     <string name="lecturer">Преподаватель</string>
+    <string name="to_change">Изменить</string>
+    <string name="date">Дата</string>
+    <string name="new_entry">Новая запись</string>
 </resources>

@@ -15,7 +15,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
         android:layout_marginStart="20dp"
-        android:text="Дата"
+        android:text="@string/date"
         android:textColor="@color/blue"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
-        android:text="Изменить"
+        android:text="@string/to_change"
         android:textColor="@color/white"
         android:backgroundTint="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,14 +35,25 @@
 
     <Button
         app:icon="@android:drawable/ic_input_add"
-
+        android:id="@+id/button_show_alert_dialog"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="120dp"
-        android:text="Новая запись"
+        android:text="@string/new_entry"
         android:textColor="@color/white"
         android:textAlignment="viewStart"
         android:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/temp_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
