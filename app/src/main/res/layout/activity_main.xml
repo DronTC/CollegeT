@@ -19,17 +19,6 @@
         android:textSize="55sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:fontFamily="sans-serif"
-        android:text="@string/enter"
-        android:textColor="@color/orange"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
     <EditText
         android:id="@+id/user_login"
         android:layout_width="300dp"
@@ -42,6 +31,17 @@
         android:hint="@string/enter_login" />
 
     <EditText
+        android:id="@+id/user_email"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:hint="@string/enter_email" />
+
+    <EditText
         android:id="@+id/user_pass"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -52,18 +52,6 @@
         android:textColor="@color/black"
         android:hint="@string/enter_password" />
 
-    <TextView
-        android:id="@+id/link_to_reg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="sans-serif"
-        android:text="@string/no_account"
-        android:textColor="@color/blue"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp" />
-
     <Button
         android:id="@+id/button_authorization"
         android:layout_width="150dp"
@@ -71,9 +59,21 @@
         android:layout_gravity="center"
         android:textSize="18sp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/blue"
+        android:backgroundTint="@color/orange"
         android:textColor="@color/white"
         android:text="@string/enter" />
+
+    <TextView
+        android:id="@+id/link_to_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/no_account"
+        android:textColor="@color/orange"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
 
 </LinearLayout>
