@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
 import java.text.SimpleDateFormat
@@ -20,9 +21,7 @@ class add_user_activity : AppCompatActivity() {
         val viewDate: TextView = findViewById(R.id.view_date)
         val buttonShowAlertDialog: Button = findViewById(R.id.button_show_alert_dialog)
         val buttonDatePicker : Button = findViewById(R.id.select_date_button)
-
-
-
+        var subjectList : MutableList<Subject> = mutableListOf()
 
         GettingCurrentDate(viewDate)
 
@@ -41,8 +40,12 @@ class add_user_activity : AppCompatActivity() {
         }
 
         buttonShowAlertDialog.setOnClickListener {
-            ShowDialog()
+            ShowDialog(subjectList, viewDate)
         }
+
+        val listView : ListView = findViewById(R.id.listView)
+        val adapter = CustomAdapter(this, R.layout.list_item, subjectList)
+        listView.adapter = adapter
 
     }
     fun GettingCurrentDate(viewDate : TextView){
@@ -56,7 +59,7 @@ class add_user_activity : AppCompatActivity() {
         val sdf = SimpleDateFormat("d MMM yyyy")
         viewDate.text = "Дата ${sdf.format(myCalendar.time)}"
     }
-    fun ShowDialog(){
+    fun ShowDialog(subjectList : MutableList<Subject>, viewDate: TextView){
         val mDialogView = LayoutInflater.from(this).inflate(R.layout.add_dialog_layout, null)
         val builder = AlertDialog.Builder(this)
             .setView(mDialogView)
@@ -67,10 +70,10 @@ class add_user_activity : AppCompatActivity() {
         val editText : EditText = mDialogView.findViewById(R.id.et_editText)
         button.setOnClickListener {
             mAlertDialog.dismiss()
-            Toast.makeText(this, editText.text, Toast.LENGTH_SHORT).show()
+            AddSubjectList(subjectList, editText.text.toString(), viewDate.text.toString())
         }
     }
-    fun CreateSubjectList(subjectList : List<Subject>){
-
+    fun AddSubjectList(subjectList : MutableList<Subject>, time : String, name : String){
+        subjectList.add(Subject(time, name))
     }
 }

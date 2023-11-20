@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 if(isAuth){
                     showToast("Пользователь $login авторизован")
                     GlobalVariables.login = login
-                    val intent = Intent(this, UserActivity::class.java)
+                    val intent = Intent(this, add_user_activity::class.java)
                     startActivity(intent)
                 }
                 else
