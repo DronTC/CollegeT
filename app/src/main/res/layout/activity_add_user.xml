@@ -34,28 +34,30 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        app:icon="@android:drawable/ic_input_add"
         android:id="@+id/button_show_alert_dialog"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="120dp"
-        android:text="@string/new_entry"
-        android:textColor="@color/white"
-        android:textAlignment="viewStart"
+        android:layout_marginTop="648dp"
         android:backgroundTint="@color/orange"
+        android:text="@string/new_entry"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        app:icon="@android:drawable/ic_input_add"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/listView"
-        tools:listitem="@layout/list_item"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="100dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/list_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
